@@ -3,7 +3,7 @@ Auto-Efficiency – Machine Learning for Predictive Analysis and Car Recommender
 
 The Project was built in an Anaconda Environment, so here are the steps to replicate it.
 
-1. There is a yml file containing the Anaconda Environment called 'FYP_TensorFlow'.
+1. There is a yml file containing the Anaconda Environment called 'FYP_TensorFlow.yml'.
 
 2. Import this environment into Anaconda Navigator to rebuild it.
 
