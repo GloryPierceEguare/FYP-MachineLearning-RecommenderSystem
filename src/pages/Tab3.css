@@ -1,0 +1,55 @@
+.mainpart {
+    background: #6038be;
+    /* text-align: center; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    /* padding: 0%; */
+    width: 90%;
+    height: 80%;
+}
+
+.outputbox {
+    font-size: 20px;
+    padding: 12px;
+}
+
+.tab3-card {
+    background: #6038be;
+}
+
+.recomm-but {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    /* position: fixed; */
+    
+}
+
+.my-custom-class {
+    /* --background: rgb(81, 82, 80); */
+    --background: #222;
+    --height: 82%;
+    --width: 90%;
+}
+
+.car-pic {
+    border: 5px double #ffc409;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 172px;
+    /* border: 5px groove #ffc409; */
+    /* border: 5px ridge #ffc409; */
+    /* border: 5px inset #ffc409; */
+  }
+
+  .toolbar-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    --border-radius: 60%;
+}

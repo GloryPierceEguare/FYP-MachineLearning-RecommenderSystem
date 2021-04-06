@@ -1,0 +1,51 @@
+.middle {
+    margin: 0 auto;
+    width: 100%;
+    /* border: 3px solid green; */
+    /* padding: 10px; */
+}
+
+.photo {
+    height: auto;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* text-align: center; */
+    /* position: fixed; */
+    /* left: 50%; */
+}
+
+p {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ordiv {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.right-image {
+    float: right;
+}
+
+.left-image {
+    float: left;
+}
+
+.toolbar-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    --border-radius: 60%;
+}
+
+.infobox {
+    font-size: 20px;
+    padding: 12px;
+    position: fixed;
+    top:50px;
+}

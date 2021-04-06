@@ -1,0 +1,7 @@
+{
+  "name": "FYP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

@@ -1,0 +1,70 @@
+.my-tab1-modal {
+    --background: #222;
+    --height: 65%;
+    --width: 95%;
+}
+
+.my-info-modal {
+    --background: rgba(8, 8, 8, 0.9);
+    --height: 90%;
+    --width: 95%;
+}
+
+.back-button {
+    --border-radius: 40%;
+    --icon-font-weight: 5%;
+    padding: 3px;
+    width: 50px;
+    height: 40px;
+}
+
+.tab2-card {
+    background: #6038be;
+}
+
+.infobox {
+    font-size: 20px;
+    padding: 12px;
+    position: fixed;
+    top:50px;
+}
+
+.middle_divider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outputbox1 {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.outputbox2 {
+    font-size: 18px;
+    /* padding: 3px; */
+}
+
+.green-text {
+    color: #2da85e;
+    /* color: #28ba62; */
+}
+
+.blue-text { 
+    color: #3a9fce;
+    /* color: #36abe0; */
+}
+
+.red-text {
+    /* color: #ffffff; */
+    color: #fc6b03;
+}
+
+.toolbar-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    --border-radius: 60%;
+}
+    
