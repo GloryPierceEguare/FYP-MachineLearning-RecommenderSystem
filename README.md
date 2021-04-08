@@ -9,16 +9,24 @@ The Project was built in an Anaconda Environment, so here are the steps to repli
 
 3. Open Visual Studio Code from the Anaconda Navigator Environment
 
+*** Must have node, and ionic installed on your machine ***
+Run : npm install -g @ionic/cli 
+to install ionic to your machine
+
 To start the enviroment run in the integrated terminal:
 
 conda activate FYP_TensorFlow
 
-To run the application run from two separate terminals:
+To deploy the application run the following 3 commands from two separate terminals:
 
 ionic serve --lab
 
 and
 
 conda activate FYP_TensorFlow
-
+          +
 npm run start-flask-api
+
+The first command deploys the front-end of the application and the second and third
+will deploy the Flask API and back-end
+
