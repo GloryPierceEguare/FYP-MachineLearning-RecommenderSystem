@@ -27,6 +27,9 @@ prep_df['Asia'] = (origin == 3) * 1.0
 # Fix layout of year
 prep_df['Model Year'] = prep_df['Model Year'] + 1900
 
+# Change format of displacement from cu to litres
+prep_df['Displacement'] = prep_df['Displacement'] / 61.0237441
+
 # Create train and test df (drop train df from test based on index)
 train_df = prep_df.sample(frac=0.8, random_state=0)
 test_df = prep_df.drop(train_df.index)
@@ -44,6 +47,7 @@ def norm(x):
 # Car preparation function
 def prep(car):
 
+    # Change fromat of weight from lbs to kg
     car['Weight'] = car['Weight'] / 0.45359237
 
     # Convert Origin to continuous data

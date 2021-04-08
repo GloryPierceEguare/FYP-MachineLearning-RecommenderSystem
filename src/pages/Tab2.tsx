@@ -5,7 +5,6 @@ import './Tab2.css';
 import { chevronBack, information, informationCircleOutline, water } from 'ionicons/icons';
 const Tab2: React.FC = () => {
 
-  // const [text, setText] = useState({placeholder});
   const [showModal, setShowModal] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
 
@@ -16,8 +15,6 @@ const Tab2: React.FC = () => {
   const [acceleration, setNumber5] = useState<number>();
   const [model_year, setNumber6] = useState<number>();
   const [origin, setText1] = useState<string>();
-
-  // const entry = ({cylinders, displacement, horsepower, weight, acceleration, model_year, origin})
 
 
   const [placeholder, setPlaceholder] = useState('');
@@ -55,9 +52,6 @@ const Tab2: React.FC = () => {
       return response.text();
   }).then(function (text) {
   
-      // console.log('POST response: ');
-      // console.log(text);
-
       // Convert the data out of JSON
       var parsedData = JSON.parse(text);
 
@@ -103,38 +97,38 @@ const Tab2: React.FC = () => {
               {/* Enter Engine Cylinders */}
               <IonItem lines="full">
                 <IonLabel position="floating">Number of Engine Cylinders</IonLabel>
-                <IonInput type="number"  value={cylinders} onIonChange={e => setNumber1(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number"  value={cylinders} min="0" onIonChange={e => setNumber1(parseInt(e.detail.value!, 10))}></IonInput>
               </IonItem>
 
               {/* Enter Engine Displacement */}
               <IonItem lines="full">
-                <IonLabel position="floating">Engine Displacement (cu)</IonLabel>
-                <IonInput type="number" value={displacement} onIonChange={e => setNumber2(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonLabel position="floating">Engine Size (litres)</IonLabel>
+                <IonInput type="number" step="0.1" value={displacement} min="0" onIonChange={e => setNumber2(parseFloat(e.detail.value!))}></IonInput>
               </IonItem>
 
               {/* Enter Horsepower */}
               <IonItem lines="full">
                 <IonLabel position="floating">Horsepower (HP)</IonLabel>
-                <IonInput type="number" value={horsepower}  onIonChange={e => setNumber3(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number" step="0.1" value={horsepower} min="0" onIonChange={e => setNumber3(parseFloat(e.detail.value!))}></IonInput>
               </IonItem>
 
               {/* Enter Car Weight */}
               <IonItem lines="full">
                 <IonLabel position="floating">Weight (kg)</IonLabel>
-                <IonInput type="number" value={weight}  onIonChange={e => setNumber4(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number" step="0.1" value={weight} min="0" onIonChange={e => setNumber4(parseFloat(e.detail.value!))}></IonInput>
               </IonItem>
 
               {/* Enter Acceleration */}
               <IonItem lines="full">
               {/* Acceleration (m/s sq.) */}
                 <IonLabel position="floating">Acceleration (0-60 secs)</IonLabel>
-                <IonInput type="number" value={acceleration}  onIonChange={e => setNumber5(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number" step="0.1" value={acceleration} min="0" onIonChange={e => setNumber5(parseFloat(e.detail.value!))}></IonInput>
               </IonItem>
 
               {/* Enter Model Year */}
               <IonItem lines="full">
                 <IonLabel position="floating">Model Year (yyyy)</IonLabel>
-                <IonInput type="number" value={model_year}  onIonChange={e => setNumber6(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number" value={model_year} min="0" max="2020" onIonChange={e => setNumber6(parseInt(e.detail.value!, 10))}></IonInput>
               </IonItem>
 
               {/* Enter Car Origin */}
@@ -199,7 +193,7 @@ const Tab2: React.FC = () => {
             Fill out the form with your car specifications to get a predicted
             fuel efficiency value based off these specifications.<br></br><br></br>
             <h2><IonText color="danger">Note!<br></br></IonText></h2>
-            ~ Engine Displacement can also be refered to as the engine capacity i.e. 1.5L Engine = 92cu.<br></br><br></br>
+            ~ Engine Size can also be refered to as the engine displacement i.e. 1.5L Engine.<br></br><br></br>
             ~ Acceleration is the time it takes for the car to accelerate 60mph or 100kmh and this 
             value can be entered in seconds.<br></br><br></br>
             ~ Origin is the geographical area that the car brand originates from.

@@ -57,8 +57,6 @@ const Tab3: React.FC = () => {
       return response.text();
   }).then(function (text) {
   
-      // console.log('POST response: ');
-
       // Convert JSON toy TyeScript variable
       var parsedData = JSON.parse(text);
       console.log(parsedData);
@@ -84,8 +82,6 @@ const Tab3: React.FC = () => {
   });
 
   }
-
-
 
   return (
     <IonPage>
@@ -114,7 +110,7 @@ const Tab3: React.FC = () => {
               {/* Enter Year */}
               <IonItem lines="full">
                 <IonLabel position="floating">Year (yyyy)</IonLabel>
-                <IonInput type="number" value={year} required onIonChange={e => setYear(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number" value={year} min="1990" max="2017" required onIonChange={e => setYear(parseInt(e.detail.value!, 10))}></IonInput>
               </IonItem>
 
               {/* Enter Transmission Type */}
@@ -162,7 +158,7 @@ const Tab3: React.FC = () => {
               {/* Enter MPG */}
               <IonItem lines="full">
                 <IonLabel position="floating">Fuel Efficiency (mpg)</IonLabel>
-                <IonInput type="number" value={mpg} required onIonChange={e => setMPG(parseInt(e.detail.value!, 10))}></IonInput>
+                <IonInput type="number" step="0.1" value={mpg} min="0" required onIonChange={e => setMPG(parseFloat(e.detail.value!))}></IonInput>
               </IonItem>
 
               {/* Submit Button */}
